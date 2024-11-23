@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{first_name} {second_name}",
+ "beta": 1,
+ "creation": "2024-11-13 11:24:46.528728",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_data_section",
+  "first_name",
+  "second_name",
+  "full_name",
+  "column_break_ywwu",
+  "birth_date",
+  "country",
+  "subjects_section",
+  "subjects"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "birth_date",
+   "fieldtype": "Date",
+   "label": "  Birth Date",
+   "options": "mm/dd/yyyy",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "second_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Second Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_ywwu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "Full Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "subjects",
+   "fieldtype": "Table",
+   "label": "Subjects",
+   "options": "Subjects"
+  },
+  {
+   "fieldname": "personal_data_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Data"
+  },
+  {
+   "fieldname": "subjects_section",
+   "fieldtype": "Section Break",
+   "label": "Subjects"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_virtual": 1,
+ "links": [],
+ "modified": "2024-11-23 09:02:09.363060",
+ "modified_by": "Administrator",
+ "module": "School",
+ "name": "Students",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "full_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
